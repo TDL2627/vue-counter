@@ -2,11 +2,20 @@
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
     
-    <div class="counter">
+    <div :style="{color: $store.state.colorCode}" class="counter">
         {{$store.state.counter}}
       </div>
-      <button @click="$store.commit('decreaseCounter') ">-</button>
-     <button @click="$store.commit('increaseCounter')">+</button>
+      <div class="counter-squared">
+        <p>    {{ $store.state.counter}}
+        <sup>2</sup>=
+      {{ $store.getters.counterSquared}}</p>
+    
+      </div>
+      <button @click="$store.dispatch('decreaseCounter') ">-</button>
+     <button @click="$store.dispatch('increaseCounter')">+</button>
+     <div>
+       <input v-model="$store.state.colorCode" placeholder="Enter color code" type="text">
+     </div>
   </div>
 </template>
 
