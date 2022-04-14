@@ -4,14 +4,14 @@
     <counter/>
     <counter-squared/>
   <buttons/>
-    <ColorCode/>
+    <colorcode/>
      
     
   </div>
 </template>
 
 <script>
-import ColorCode from '../components/ColorCode.vue'
+
 // @ is an alias to /src
 
 export default {
@@ -19,7 +19,9 @@ export default {
 components:{
   'counter':require('@/components/Counter.vue').default,
   'counter-squared':require('@/components/CounterSquared.vue').default,
-ColorCode
+    'buttons':require('@/components/Buttons.vue').default,
+    'colorcode':require('@/components/ColorCode.vue').default,
+
 }
 
 }

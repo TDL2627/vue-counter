@@ -12,8 +12,8 @@ export default createStore({
     decreaseCounter(state, randomNumber){
       state.counter-=randomNumber
     },
-    setColorCode(state,newValue){
-      state.colorCode-=newValue
+    setColorCode(state, newValue){
+      state.colorCode =newValue
     }
   },
   actions: {
